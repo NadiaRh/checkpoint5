@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+let object={
+	photo:"/image.jpg",
+	Name:{firstName:"Nadia ", lastName:"Rahmeni"},
+	profileLink:"www.facebook.com"
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <img src={object.photo} alt='..'/> 
+     <p>{object.Name.firstName}</p> 
+     <p>{object.Name.lastName} </p>
+     <button onClick={() => object.profileLink.length!==0? window.open(object.profileLink):'#'}>see profil</button>
     </div>
+   
   );
 }
 
